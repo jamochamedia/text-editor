@@ -1,9 +1,11 @@
 import React from 'react';
-import { EditorState, RichUtils} from 'draft-js';
+import { EditorState, RichUtils } from 'draft-js';
 import Editor from "draft-js-plugins-editor";
+
 import createHighlightPlugin from './plugins/highlightPlugin';
 import addLinkPlugin from './plugins/addLinkPlugin';
 import BlockStyleToolbar, { getBlockStyle } from "./blockStyles/BlockStyleToolbar";
+
 
 const highlightPlugin = createHighlightPlugin();
 
@@ -68,7 +70,7 @@ class PageContainer extends React.Component {
     }
 
     toggleBlockType = (blockType) => {
-    this.onChange(RichUtils.toggleBlockType(this.state.editorState, blockType));
+        this.onChange(RichUtils.toggleBlockType(this.state.editorState, blockType));
     };
 
     render() {
