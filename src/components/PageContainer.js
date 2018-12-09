@@ -52,7 +52,7 @@ class PageContainer extends React.Component {
     }
 
     onAddLink = () => {
-        const editorState = this.state.editorState();
+        const editorState = this.state.editorState;
         const selection = editorState.getSelection();
         const link = window.prompt('Paste link here:');
 
